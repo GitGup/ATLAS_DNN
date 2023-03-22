@@ -1,4 +1,5 @@
-from ROOT import TH1F, TGraph
+import ROOT
+from ROOT import TH1F, TGraph, TH2F, TCanvas
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -18,6 +19,21 @@ def create_histogram(column, nbins=50):
             hist.Fill(val)
             
     return hist
+
+def create_2dhistogram(xdata, ydata, title, xlabel, ylabel, nbinsx, xmin, xmax, nbinsy, ymin, ymax):
+    hist = ROOT.TH2F("hist", title, nbinsx, xmin, xmax, nbinsy, ymin, ymax)
+    hist.GetXaxis().SetTitle(xlabel)
+    hist.GetYaxis().SetTitle(ylabel)
+
+    for i in range(len(xdata)):
+        hist.Fill(xdata[i], ydata[i])
+
+    hist.SetLineColor(ROOT.kBlack)
+    hist.Draw()
+    canvas.Draw()
+
+    return hist
+
     
 #ROOT TGraph
 def createTGraph(x, y, title="", xtitle="", ytitle=""):
