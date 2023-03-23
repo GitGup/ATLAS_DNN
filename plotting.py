@@ -28,10 +28,6 @@ def create_2dhistogram(xdata, ydata, title, xlabel, ylabel, nbinsx, xmin, xmax, 
     for i in range(len(xdata)):
         hist.Fill(xdata[i], ydata[i])
 
-    hist.SetLineColor(ROOT.kBlack)
-    hist.Draw()
-    canvas.Draw()
-
     return hist
 
     
