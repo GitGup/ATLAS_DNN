@@ -3,6 +3,8 @@ from ROOT import TH1F, TGraph, TH2F, TCanvas
 import numpy as np
 import matplotlib.pyplot as plt
 
+#-------------------------- ROOT --------------------------
+
 #takes branch name and creates a ROOT histogram
 def create_histogram(column, nbins=50):
     data = []
@@ -49,10 +51,13 @@ def createTGraph(x, y, title="", xtitle="", ytitle=""):
     # Return the TGraph object
     return graph
 
-#matplotlib scatter plot
-def scatter_plot(x, y, title, xlabel, ylabel, s):
-    plt.scatter(x, y, s = s)
-    plt.xlabel(xlabel)
-    plt.ylabel(ylabel)
-    plt.title(title)
-    plt.show()
+#-------------------------- MATPLOTLIB --------------------------
+
+#scatter plot
+def scatter_plot(x, y, s):
+    plot = plt.scatter(x, y, s = s)
+    return plot
+
+#histogram
+def hist(x, bins):
+    plt.hist(x, bins)
