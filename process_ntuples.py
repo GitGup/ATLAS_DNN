@@ -21,3 +21,10 @@ def show(event, TTree, branches, batch_size):
             break
         current_event+=1
     return arrays
+
+
+def remove_empty(df):
+    empty_indices = [i for i, x in enumerate(df[df.columns[0]]) if len(x) == 0]
+    df = df.drop(empty_indices)
+    df = df.reset_index(drop=True)
+    return df
