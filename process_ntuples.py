@@ -1,5 +1,6 @@
 import uproot
 import os
+import numpy as np
 
 #processes ntunples given directory: returns trees 
 def process_ntuple(dir_path, ntuple):
@@ -22,9 +23,13 @@ def show(event, TTree, branches, batch_size):
         current_event+=1
     return arrays
 
-
 def remove_empty(df):
     empty_indices = [i for i, x in enumerate(df[df.columns[0]]) if len(x) == 0]
     df = df.drop(empty_indices)
     df = df.reset_index(drop=True)
     return df
+
+def divide_by_1000(x):
+    x_arr = np.array(x)
+    x_arr /= 1000
+    return uproot.STLVector(x_arr.tolist())
