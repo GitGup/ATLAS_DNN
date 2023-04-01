@@ -32,10 +32,10 @@ Classifier for $D^{+}\rightarrow k^{-} \pi^{+} \pi^{+}$ and $\Lambda_c^{+}\right
 --------------------------------------------------------------------------------
 **Jupyter Notebooks**:
 
--These notebooks are Monte Carlo analyses of forced decays of $D^{+}\rightarrow k^{-} \pi^{+} \pi^{+}$ and $\Lambda_c^{+}\rightarrow p k^{-} \pi^{+}$
+- These notebooks are Monte Carlo analyses of forced decays of $D^{+}\rightarrow k^{-} \pi^{+} \pi^{+}$ and $\Lambda_c^{+}\rightarrow p k^{-} \pi^{+}$
 
--**MC_DNN**: Monte Carlo analysis, cuts, and machine learning applied 
+- **MC_DNN**: Monte Carlo analysis, cuts, and machine learning applied 
 
--**MC_Dalitz**: Creation of Dalitz plots through TLorentzVectors of $D^{+}$ and $\Lambda_C^{+}$ using p_t, eta, phi, and m (from pdg https://pdg.lbl.gov/), confirmed $D^{+}$ Dalitz in according to CLEO paper (https://arxiv.org/pdf/0707.3060.pdf), extended to $\Lambda_C^{+}$
+- **MC_Dalitz**: Creation of Dalitz plots through TLorentzVectors of $D^{+}$ and $\Lambda_C^{+}$ using p_t, eta, phi, and m (from pdg https://pdg.lbl.gov/), confirmed $D^{+}$ Dalitz in according to CLEO paper (https://arxiv.org/pdf/0707.3060.pdf), extended to $\Lambda_C^{+}$
 
 --------------------------------------------------------------------------------
