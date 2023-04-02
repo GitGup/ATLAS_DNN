@@ -25,14 +25,14 @@ Classifier for $D^{+}\rightarrow k^{-} \pi^{+} \pi^{+}$ and $\Lambda_c^{+}\right
 
 - **cuts.py**: apply cutoffs to certain features corresponding to candidate reconstructed particle or tracks of the daughters of the candidate particle
 
-- **plotting.py**: ROOT plotting of HIST, TH1D, etc, as well as matplotlib plotting methods
+- **plotting.py**: ROOT plotting of HIST, TH1F, TGraph, etc, as well as matplotlib plotting methods
 
 - **common.py**: common imports used across the modules
 
 --------------------------------------------------------------------------------
 **Jupyter Notebooks**:
 
-- These notebooks are Monte Carlo analyses of forced decays of $D^{+}\rightarrow k^{-} \pi^{+} \pi^{+}$ and $\Lambda_c^{+}\rightarrow p k^{-} \pi^{+}$
+These notebooks are Monte Carlo analyses of forced decays of $D^{+}\rightarrow k^{-} \pi^{+} \pi^{+}$ and $\Lambda_c^{+}\rightarrow p k^{-} \pi^{+}$
 
 - **MC_DNN**: Monte Carlo analysis, cuts, and machine learning applied 
 
