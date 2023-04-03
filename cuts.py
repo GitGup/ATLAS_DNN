@@ -1,6 +1,9 @@
 from common import np, pd
 
 #Given data frame apply cuts to desired features: returns mutated df
+
+pt_col = "DMesons_pt"
+
 def apply_cuts(df):
     cut_indicies = []
     for index, row in df.iterrows():
@@ -24,4 +27,18 @@ def apply_cuts(df):
     df = df.drop(index = cut_indicies, axis = 0)
     df = df.reset_index(drop = True)
         
+    return df
+
+def apply_pt_cut(df):
+    cut_indicies = []
+    for index, row in df.iterrows():
+        pts = row[pt_col]
+        count = 0
+        for pt in pts:
+            if pt < 8:
+                cut_indicies.append(index)
+            count+=1
+    df = df.drop(index = cut_indicies, axis = 0)
+    df = df.reset_index(drop = True)
+    
     return df
