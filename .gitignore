@@ -3,3 +3,4 @@
 *.csv
 *.hdf
 __pycache__/
+wandb/
