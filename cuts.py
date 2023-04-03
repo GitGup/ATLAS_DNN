@@ -20,8 +20,8 @@ def apply_cuts(df):
                 cut_indicies.append(index)
             count+=1
         
-        #drop the row given the index we want to cut
-        df = df.drop(index = cut_indicies, axis = 0)
-        df = df.reset_index(drop = True)
+    #drop the row given the index we want to cut
+    df = df.drop(index = cut_indicies, axis = 0)
+    df = df.reset_index(drop = True)
         
     return df
