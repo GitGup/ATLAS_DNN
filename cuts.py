@@ -17,7 +17,7 @@ def apply_cuts(df):
                 continue
             if (pt < 8):
                 cut_indicies.append(index)
-            elif (m < 100):
+            elif (2 > m > 2.5):
                 cut_indicies.append(index)
             elif (eta > 2.2):
                 cut_indicies.append(index)
