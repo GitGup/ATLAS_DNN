@@ -5,8 +5,24 @@ import matplotlib.pyplot as plt
 
 #-------------------------- ROOT --------------------------
 
-#takes branch name and creates a ROOT histogram
+#Given a data frame where the entries are floats
 def create_histogram(column, nbins=50):
+    xmin = np.min(column)
+    xmax = np.max(column)
+
+    hist = TH1F("hist", "Histogram", nbins, xmin, xmax)
+
+    #need these when calling
+    #canvas = ROOT.TCanvas("canvas", "My Canvas")
+    #hist.Draw()
+    #canvas.Draw()
+    for val in column:
+        hist.Fill(val)
+            
+    return hist
+
+#given a data frame where the entries are arrays/lists, plot a ROOT Hist
+def create_histogram_from_df_array(column, nbins=50):
     data = []
     for arr in column:
         data.extend(arr)
