@@ -1,9 +1,6 @@
 from common import np, pd
 
 #Given data frame apply cuts to desired features: returns mutated df
-
-pt_col = "DMesons_pt"
-
 def apply_cuts(df):
     cut_indicies = []
     for index, row in df.iterrows():
@@ -29,6 +26,7 @@ def apply_cuts(df):
         
     return df
 
+#only pt cut
 def apply_pt_cut(df):
     cut_indicies = []
     for index, row in df.iterrows():
