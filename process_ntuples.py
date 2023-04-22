@@ -33,8 +33,9 @@ def generate_df(TTree, branches: list, events):
     df = show(0, TTree, branches, events)
     df = remove_empty(df)
 
-    df["DMesons_pt"] = df["DMesons_pt"].apply(divide_by_1000)
     for col in df.columns:
+        if col == "DMesons_pt" or col == "DMesons_daughterInfo__pt":
+            df[col] = df[col].apply(divide_by_1000)
         df[col] = df[col].apply(list)
         
     return df
