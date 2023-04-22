@@ -4,9 +4,11 @@ from common import np, pd
 def apply_cuts(df):
     cut_indicies = []
     for index, row in df.iterrows():
+        
         pts = row["DMesons_pt"]
         ms = row["DMesons_m"]
         etas = row["DMesons_eta"]    
+        
         count = 0
         for pt, m, eta in zip(pts, ms, etas):
             if count == 1:
