@@ -1,5 +1,6 @@
 import ROOT
 from ROOT import TH1F, TGraph, TH2F, TCanvas
+import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -77,3 +78,20 @@ def scatter_plot(x, y, s):
 #histogram
 def hist(x, bins):
     plt.hist(x, bins)
+
+def hist_normalized(data1, data2, bins):
+    
+    if not isinstance(data1, (pd.Series, np.ndarray)) or not isinstance(data2, (pd.Series, np.ndarray)):
+        raise TypeError("data must be a Pandas Series or NumPy array")
+        
+    counts, bins, _ = plt.hist(data1, bins=bins)
+    counts2, bins2, _ = plt.hist(data2, bins=bins)
+    # Normalize the histogram using the formula
+    density = counts / (sum(counts) * np.diff(bins))
+    density2 = counts2 / (sum(counts2) * np.diff(bins2))
+
+    # Plot the normalized histogram
+    plt.clf()
+    plt.bar(bins[:-1], density, width=np.diff(bins), align='edge', alpha=0.5, label = "$D^{+}$ Background")
+    plt.bar(bins2[:-1], density2, width=np.diff(bins2), align='edge', alpha=0.5, label = "$\Lambda_C^{+}$ Signal")
+    return plt
