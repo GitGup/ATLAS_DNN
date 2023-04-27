@@ -40,3 +40,10 @@ def remove_duplicates(df):
     df = df.reset_index(drop=True)
     print("Removed {}".format(len(indicies)) + " duplicate particles")
     return df
+
+#given data frame get the column names
+def get_columns(df):
+    training_columns = []
+    for col in df.columns:
+        training_columns.append(col)
+    return training_columns
