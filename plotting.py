@@ -92,6 +92,6 @@ def hist_normalized(data1, data2, bins):
 
     # Plot the normalized histogram
     plt.clf()
-    plt.bar(bins[:-1], density, width=np.diff(bins), align='edge', alpha=0.5, label = "$D^{+}$ Background")
+    plt.bar(bins[:-1], density, width=np.diff(bins), align='edge', alpha=0.5, label = "Sherpa Background")
     plt.bar(bins2[:-1], density2, width=np.diff(bins2), align='edge', alpha=0.5, label = "$\Lambda_C^{+}$ Signal")
     return plt
