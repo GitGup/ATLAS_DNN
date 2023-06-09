@@ -18,7 +18,7 @@ def divide_by_1000(x):
 
 # Save data frame using pickle library (saves to folder named pickled in same dir)
 def save(df, name):
-    path = "/global/cscratch1/sd/gupsingh/pickled/"
+    path = "pickled/"
     if not os.path.exists(path):
         os.makedirs(path)
     with open(path + '{}.pickle'.format(name), 'wb') as f:
@@ -26,7 +26,7 @@ def save(df, name):
     
 # Read data frame and load it
 def load(name):
-    path = "/global/cscratch1/sd/gupsingh/pickled/"
+    path = "pickled/"
     if not os.path.exists(path):
         os.makedirs(path)
     with open(path + '{}.pickle'.format(name), 'rb') as f:
