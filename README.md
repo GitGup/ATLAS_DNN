@@ -36,9 +36,7 @@ Monte Carlo Forced Decays: $D^{+}\rightarrow k^{-} \pi^{+} \pi^{+}$ and $\Lambda
 --------------------------------------------------------------------------------
 **Jupyter Notebooks**:
 
-These notebooks are Monte Carlo analyses of forced decays of $D^{+}\rightarrow k^{-} \pi^{+} \pi^{+}$ and $\Lambda_c^{+}\rightarrow p k^{-} \pi^{+}$
-
-- **MC_DNN**: Monte Carlo analysis, cuts, and machine learning applied.
+- **MC_DNN**: Building of the machine learning model and pre processing of data, creating of TLorentzVectors, and analysis of results.
 
 - **MC_Dalitz**: Creation of Dalitz plots through TLorentzVectors of $D^{+}$ and $\Lambda_C^{+}$ using p_t, eta, phi, and m (from pdg https://pdg.lbl.gov/), confirmed $D^{+}$ Dalitz in accordance to CLEO paper (https://arxiv.org/pdf/0707.3060.pdf), extended to $\Lambda_C^{+}$
 
