@@ -9,7 +9,7 @@
 
 Monte Carlo Forced Decays: $D^{+}\rightarrow k^{-} \pi^{+} \pi^{+}$ and $\Lambda_c^{+}\rightarrow p k^{-} \pi^{+}$
 
-Create a method of distinguishing D and Lambda Mesons from Lambda Cadidate Reconstructed data. $D^{+}$ and $\Lambda_c^{+}$ have distinct dalitz structure. We want to incoperate the dalitz information through computation of Lorentz Vectors and invariant mass combinations into training to see how well we can seperate D Meson and Lambda reconunstructed particles. 
+Create a method of distinguishing Lambda Mesons from Sherpa221 MC Data. $\Lambda_c^{+}$ has distinct dalitz structure. We want to incoperate the dalitz information through computation of Lorentz Vectors and invariant mass combinations into training to see how well we can seperate D Meson and Lambda reconunstructed particles. 
 
 --------------------------------------------------------------------------------
 **Required Packages**:
