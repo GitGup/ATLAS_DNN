@@ -2,7 +2,9 @@
 
 **ATLAS Group at Berkeley**
 
-**Author**: Written by Gurpreet (Gup) Singh (gupsingh@berkeley.edu)
+**Authors**: 
+Written by Gurpreet (Gup) Singh (gupsingh@berkeley.edu)
+Supervised by Gregory Ottino (gregory_ottino@berkeley.edu)
 
 --------------------------------------------------------------------------------
 **Purpose**: 
